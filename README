@@ -1,0 +1,1 @@
+To bootstrap the toybox system copy toybox to /usr/local/bin/ and toybox.d to /usr/local/etc/, then make your first toybox.
