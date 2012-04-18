@@ -7,7 +7,7 @@ usage() {
 
 start_toybox_install() (
     if [ ! -d "$1" ]; then
-        echo "no (`pwd`)"
+        echo "no - toy missing (`pwd`)"
         exit 3
     fi
 
@@ -16,7 +16,7 @@ start_toybox_install() (
 
 start_toybox_uninstall() (
     if [ ! -d "$1" ]; then
-        echo "no (`pwd`)"
+        echo "no - toy missing (`pwd`)"
         exit 3
     fi
 
@@ -27,7 +27,7 @@ start() {
     if [ $# = 0 ]; then usage; fi
 
     if ! . .toybox.conf; then
-        echo 'um'
+        echo 'um - toybox missing'
         exit 2
     fi
 
