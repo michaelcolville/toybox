@@ -49,4 +49,4 @@ start() {
     if [ ! $# = 0 ]; then usage; fi
 }
 
-start $@ #2> /dev/null
+start $@ 2> /dev/null
