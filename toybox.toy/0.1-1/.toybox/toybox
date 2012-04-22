@@ -76,22 +76,10 @@ start() {
 
                 case $m in
                     -i)
-                        start_toybox_install "$a"
-
-                        r=$?
-
-                        if [ $r != 0 ]; then
-                            exit $r
-                        fi
+                        start_toybox_install "$a" || exit $?
                         ;;
                     -u)
-                        start_toybox_uninstall "$a"
-
-                        r=$?
-
-                        if [ $r != 0 ]; then
-                            exit $r
-                        fi
+                        start_toybox_uninstall "$a" || exit $?
                         ;;
                     *)
                         usage
