@@ -20,6 +20,8 @@ start_toybox_install() (
         echo "no - $1 - not installed"
         exit $r
     fi
+
+    echo "ok - $a - installed"
 )
 
 start_toybox_uninstall() (
@@ -37,6 +39,8 @@ start_toybox_uninstall() (
         echo "no - $1 - not uninstalled"
         exit $r
     fi
+
+    echo "ok - $a - uninstalled"
 )
 
 start() {
@@ -79,8 +83,6 @@ start() {
                         if [ $r != 0 ]; then
                             exit $r
                         fi
-
-                        echo "ok - $a - installed"
                         ;;
                     -u)
                         start_toybox_uninstall "$a"
@@ -90,8 +92,6 @@ start() {
                         if [ $r != 0 ]; then
                             exit $r
                         fi
-
-                        echo "ok - $a - uninstalled"
                         ;;
                     *)
                         usage
