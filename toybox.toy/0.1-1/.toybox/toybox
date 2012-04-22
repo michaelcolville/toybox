@@ -21,7 +21,7 @@ start_toybox_install() (
         exit $r
     fi
 
-    echo "ok - $a - installed"
+    echo "ok - $1 - installed"
 )
 
 start_toybox_uninstall() (
@@ -40,7 +40,7 @@ start_toybox_uninstall() (
         exit $r
     fi
 
-    echo "ok - $a - uninstalled"
+    echo "ok - $1 - uninstalled"
 )
 
 start() {
