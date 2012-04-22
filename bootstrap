@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./toybox.toy/stable/.toybox/toybox -i toybox.toy/stable

@@ -1,1 +1,7 @@
-To bootstrap the toybox system copy toybox to /usr/local/bin/ and toybox.d to /usr/local/etc/, then make your first toybox.
+To bootstrap your toybox system do -
+
+./bootstrap
+
+Note that you may need to use sudo!
+
+This script uses toybox.toy to install itself as /usr/local/bin/toybox :)
