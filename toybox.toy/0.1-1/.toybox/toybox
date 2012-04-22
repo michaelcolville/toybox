@@ -8,7 +8,7 @@ usage() {
 start_toybox_install() (
     if ! . "$1/.toybox/toybox.conf"; then
         echo "uh - $1 - no toybox.conf"
-        echo "no - $1"
+        echo "no - $1 - not installed"
         exit 2
     fi
 
@@ -17,7 +17,7 @@ start_toybox_install() (
     r=$?
 
     if [ $r != 0 ]; then
-        echo "no - $1"
+        echo "no - $1 - not installed"
         exit $r
     fi
 )
@@ -25,7 +25,7 @@ start_toybox_install() (
 start_toybox_uninstall() (
     if ! . "$1/.toybox/toybox.conf"; then
         echo "uh - $1 - no toybox.conf"
-        echo "no - $1"
+        echo "no - $1 - not uninstalled"
         exit 2
     fi
 
@@ -34,7 +34,7 @@ start_toybox_uninstall() (
     r=$?
 
     if [ $r != 0 ]; then
-        echo "no - $1"
+        echo "no - $1 - not uninstalled"
         exit $r
     fi
 )
@@ -80,7 +80,7 @@ start() {
                             exit $r
                         fi
 
-                        echo "ok - $a"
+                        echo "ok - $a - installed"
                         ;;
                     -u)
                         start_toybox_uninstall "$a"
@@ -91,7 +91,7 @@ start() {
                             exit $r
                         fi
 
-                        echo "ok - $a"
+                        echo "ok - $a - uninstalled"
                         ;;
                     *)
                         usage
