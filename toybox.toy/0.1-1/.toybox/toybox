@@ -51,17 +51,7 @@ start() {
     for a in "$@"; do
         shift
         case "$a" in
-            -i)
-                if [ $# = 0 ] ||
-                   [ $s = 1 ]; then
-                    usage
-                fi
-
-                s=1
-
-                m=$a
-                ;;
-            -u)
+            -i | -u)
                 if [ $# = 0 ] ||
                    [ $s = 1 ]; then
                     usage
